@@ -14,7 +14,6 @@ export const CLASSIFIER_DB = {
       traits: { D: 2, R: 4, I: 3, T: 3, E: 2 },
       accentColor: "#38bdf8", // Sky/Cyan
       glowColor: "rgba(56, 189, 248, 0.4)",
-      tagline: "Sovereign of the Deep & Master Negotiator"
     },
     Heleion: {
       name: "Heleion",
@@ -22,7 +21,6 @@ export const CLASSIFIER_DB = {
       traits: { D: 5, R: 1, I: 5, T: 3, E: 3 },
       accentColor: "#c084fc", // Pale Purple
       glowColor: "rgba(192, 132, 252, 0.4)",
-      tagline: "Sages of Cosmic Light & Harmony"
     },
     Kazandrian: {
       name: "Kazandrian",
@@ -30,7 +28,6 @@ export const CLASSIFIER_DB = {
       traits: { D: 2, R: 5, I: 3, T: 4, E: 1 },
       accentColor: "#f87171", // Soft Red
       glowColor: "rgba(248, 113, 113, 0.4)",
-      tagline: "Permanent Wardens of the Iron Crust"
     },
     Ymaari: {
       name: "Ymaari",
@@ -38,7 +35,6 @@ export const CLASSIFIER_DB = {
       traits: { D: 1, R: 2, I: 4, T: 1, E: 1 },
       accentColor: "#fb923c", // Soft Orange
       glowColor: "rgba(251, 146, 60, 0.4)",
-      tagline: "Rogue Alchemists of the Wastelands"
     },
     Elysian: {
       name: "Elysian",
@@ -46,7 +42,6 @@ export const CLASSIFIER_DB = {
       traits: { D: 2, R: 2, I: 5, T: 2, E: 5 },
       accentColor: "#fbbf24", // Premium Gold
       glowColor: "rgba(251, 191, 36, 0.4)",
-      tagline: "Architects of Supreme Determinism"
     },
     Nephimai: {
       name: "Nephimai",
@@ -54,7 +49,6 @@ export const CLASSIFIER_DB = {
       traits: { D: 3, R: 1, I: 4, T: 1, E: 1 },
       accentColor: "#fda4af", // Soft rose gold
       glowColor: "rgba(253, 164, 175, 0.5)",
-      tagline: "GENESIS CLASSIFIED // THE FORBIDDEN OUTCAST"
     }
   },
 
