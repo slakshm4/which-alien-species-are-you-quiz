@@ -23,6 +23,7 @@ import {
 import { CLASSIFIER_DB } from './data/classifier.js';
 import RedactedText from './components/RedactedText.jsx';
 import { playTerminalBeep } from './utils/audio.js';
+import { supabase } from './lib/supabase.js';
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState('landing'); // landing, nda, quiz, tiebreaker, loading, results
@@ -59,6 +60,22 @@ export default function App() {
   const addLog = (message) => {
     const time = new Date().toLocaleTimeString();
     setTerminalLogs(prev => [...prev.slice(-3), `[${time}] ${message}`]);
+  };
+
+  const saveQuizResult = async (species) => {
+    if (!supabase || !guestName.trim()) return;
+
+    const { error } = await supabase
+      .from('quiz_results')
+      .insert({ guest_name: guestName.trim(), species });
+
+    if (error) {
+      console.error('Could not save quiz result:', error.message);
+      addLog('RESULT ARCHIVE UNAVAILABLE. CLASSIFICATION REMAINS LOCAL.');
+      return;
+    }
+
+    addLog('RESULT ARCHIVED TO PRIVATE REGISTRY.');
   };
 
   const handleStartClassification = () => {
@@ -233,6 +250,7 @@ export default function App() {
           setMatchResult(finalWinner);
           setCurrentScreen('results');
           addLog(`DOSSIER ENVELOPE [${finalWinner.toUpperCase()}] DECLASSIFIED.`);
+          void saveQuizResult(finalWinner);
         }, 600);
       }
     }, 120); 
@@ -567,6 +585,9 @@ export default function App() {
               </p>
               <p className="text-slate-400 text-xs italic">
                 By typing your sign-off key below and authorising, you pledge your cognitive integrity to the secure database system.
+              </p>
+              <p className="text-slate-400 text-xs italic">
+                Your entered name and final species classification will be stored in a private results registry for the quiz owner to review.
               </p>
             </div>
 
