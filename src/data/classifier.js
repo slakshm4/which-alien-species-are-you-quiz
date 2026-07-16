@@ -116,27 +116,32 @@ export const CLASSIFIER_DB = {
         {
           text: "We Are Charlie Kirk",
           url: "https://www.youtube.com/watch?v=I0RC2Z-V1I0",
+          audioUrl: "/audio-option-a.mp3",
           species: "Elysian"
         },
         {
           text: "Xue Hua Piao Piao",
           url: "https://www.youtube.com/watch?v=UFQkmCDa93o",
+          audioUrl: "/audio-option-b.mp3",
           species: "Nephimai",
           override: true
         },
         {
           text: "Never Gonna Give You Up",
           url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          audioUrl: "/audio-option-c.mp3",
           species: "Kazandrian"
         },
         {
           text: "River Flows in You",
           url: "https://www.youtube.com/watch?v=fP0fQzvtzF0",
+          audioUrl: "/audio-option-d.mp3",
           species: "Heleion"
         },
         {
           text: "Mundian To Bach Ke",
           url: "https://www.youtube.com/watch?v=x9WO2ieJMYk",
+          audioUrl: "/audio-option-e.mp3",
           species: "Ymaari"
         }
       ]

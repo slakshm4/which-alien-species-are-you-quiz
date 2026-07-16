@@ -355,16 +355,18 @@ export default function App() {
     setMatchResult(null);
   };
 
-  const playAudioTransmission = (url) => {
+  const playAudioTransmission = (audioUrl) => {
+    const resolvedAudioUrl = new URL(audioUrl, window.location.href).href;
     if (activeAudio) {
       activeAudio.pause();
-      if (activeAudio.src === url) {
+      if (activeAudio.src === resolvedAudioUrl) {
         setActiveAudio(null);
         return;
       }
     }
-    const audio = new Audio(url);
-    audio.play();
+    const audio = new Audio(resolvedAudioUrl);
+    audio.addEventListener('ended', () => setActiveAudio(null), { once: true });
+    audio.play().catch(() => setActiveAudio(null));
     setActiveAudio(audio);
   };
 
@@ -693,9 +695,9 @@ export default function App() {
                         {/* Audio Transmission Button or Embed */}
                         {(hasEmbed || isMemeQuestion) && (
                           <div className="border-t border-slate-900 bg-slate-950 p-5 w-full flex gap-3">
-                            {isMemeQuestion && (
+                            {isMemeQuestion && ans.audioUrl && (
                               <button
-                                onClick={() => playAudioTransmission(ans.url)}
+                                onClick={() => playAudioTransmission(ans.audioUrl)}
                                 className="flex-grow py-3 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 hover:border-cyan-500 transition-all font-sans-luxury uppercase text-xs tracking-widest rounded-full flex items-center justify-center space-x-2"
                               >
                                 <Volume2 className="w-3.5 h-3.5" />

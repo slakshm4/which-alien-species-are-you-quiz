@@ -1,0 +1,9 @@
+Place your five audio files in this folder and name them exactly:
+
+audio-option-a.mp3
+audio-option-b.mp3
+audio-option-c.mp3
+audio-option-d.mp3
+audio-option-e.mp3
+
+The Audio Transmission button for each answer will play its matching file.
