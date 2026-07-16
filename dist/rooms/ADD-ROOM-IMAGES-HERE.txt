@@ -1,0 +1,10 @@
+Put your chosen room images in this folder and name them exactly:
+
+room-a.jpg
+room-b.jpg
+room-c.jpg
+room-d.jpg
+
+These correspond directly to answer options A through D in the room question.
+If your images are PNG or WebP files instead, update both the filename and
+extension in src/data/classifier.js.

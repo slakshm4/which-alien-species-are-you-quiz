@@ -173,25 +173,25 @@ export const CLASSIFIER_DB = {
       answers: [
         {
           text: "Room A - Underground Cave",
-          image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+          image: "/rooms/room-a.jpg",
           alt: "A warm, sandy stone cave bedroom with a low cream-coloured bed, looking out at a desert pool and a misty waterfall.",
           species: "Kazandrian"
         },
         {
           text: "Room B - Underwater Chamber",
-          image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+          image: "/rooms/room-b.jpg",
           alt: "A sleek, blue-lit futuristic bedroom with a canopy bed facing a massive window view of a bioluminescent underwater city.",
           species: "Adrielite"
         },
         {
           text: "Room C - Industrial Sleeping Pod",
-          image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+          image: "/rooms/room-c.jpg",
           alt: "A metallic, industrial spaceship sleeping pod with a messy bed and a window overlooking a rainy, neon cyberpunk city.",
           species: "Ymaari"
         },
         {
           text: "Room D - Forest Waterfall Suite",
-          image: "https://images.unsplash.com/photo-1546548970-71785318a17b?auto=format&fit=crop&w=800&q=80",
+          image: "/rooms/room-d.jpg",
           alt: "A dark stone bedroom with a low slate-blue bed and floor-to-ceiling glass showcasing a lush, cascading rainforest waterfall",
           species: "Heleion"
         }
