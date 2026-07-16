@@ -565,7 +565,7 @@ export default function App() {
                   className="mt-1 accent-cyan-500 rounded text-slate-900 border-slate-800"
                 />
                 <span className="text-xs text-slate-400 font-sans-luxury leading-relaxed group-hover:text-slate-300">
-                  I commit my metadata vectors to Dr. Shradha Lakshman, Director of Xenomedical Intelligence's secure database under absolute non-disclosure protocols.
+                  I commit my metadata vectors to the Archive Access Registry secure database under absolute non-disclosure protocols.
                 </span>
               </label>
 
