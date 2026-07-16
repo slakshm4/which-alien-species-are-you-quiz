@@ -980,7 +980,7 @@ export default function App() {
                   className="px-6 py-3 rounded bg-transparent border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 text-[11px] font-sans-luxury uppercase tracking-widest transition-colors flex items-center space-x-2"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
-                  <span>Return to Landing</span>
+                  <span>Clear Buffer</span>
                 </button>
               </div>
             </div>
