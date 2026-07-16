@@ -10,8 +10,12 @@ export default function RedactedText({ children }) {
     const otherChars = "0123456789!@#$%^&*()";
     const originalText = children;
     let glitchInterval;
+    let initialTimer;
+    let isAnimating = false;
 
     const startGlitch = () => {
+      if (isAnimating) return;
+      isAnimating = true;
       setIsGlitching(true);
       let iterations = 0;
       
@@ -35,20 +39,19 @@ export default function RedactedText({ children }) {
         iterations += 1 / 3;
         if (iterations >= originalText.length) {
           clearInterval(glitchInterval);
+          isAnimating = false;
           setIsGlitching(false);
           setDisplayText(originalText);
         }
       }, 50);
     };
 
-    const timer = setInterval(() => {
-      if (!isGlitching && Math.random() > 0.6) {
-        startGlitch();
-      }
-    }, 2500);
+    initialTimer = setTimeout(startGlitch, 800);
+    const timer = setInterval(startGlitch, 4000);
 
     return () => {
       clearInterval(timer);
+      clearTimeout(initialTimer);
       clearInterval(glitchInterval);
     };
   }, [children]);

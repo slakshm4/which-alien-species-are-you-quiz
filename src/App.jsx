@@ -523,7 +523,7 @@ export default function App() {
                 IMPORTANT WARNING: BY DECRYPTING YOUR GENOMIC MATRIX DATASET AND COMPILING INDEPENDENT SYSTEM ALIGNMENTS, YOU AGREE TO THE FOLLOWING PROTOCOLS:
               </p>
               <p>
-                1. <span className="font-bold text-slate-100">Absolute Non-Disclosure:</span> The results computed by Dr. Shradha Lakshman, Director of Xenomedical Intelligence's mainframe contain structural behavioural analytics that indicate evolutionary alignment with restricted interspecies networks. Any uncontrolled transmission of target species vectors is prosecutable by the Cosmic Tribunal.
+                1. <span className="font-bold text-slate-100">Absolute Non-Disclosure:</span> The results computed by Dr. Shradha Lakshman, Director of Xenomedical Intelligence's mainframe contain structural behavioural analytics that indicate evolutionary alignment with <RedactedText>restricted interspecies networks</RedactedText>. Any uncontrolled transmission of <RedactedText>target species vectors</RedactedText> is prosecutable by the Cosmic Tribunal.
               </p>
               <p>
                 2. <span className="font-bold text-slate-100">Metadata Access Consent:</span> You grant temporary read-access to your behavioural profile metrics, decision history parameters, and cognitive heuristics for scientific synthesis purposes under strict privacy constraints.
