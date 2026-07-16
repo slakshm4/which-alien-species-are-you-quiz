@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+html {
+  background: #070b12;
+}
+
+body {
+  margin: 0;
+}
+
+.font-sans-luxury { font-family: 'Space Grotesk', sans-serif; }
+.font-serif-luxury { font-family: 'Playfair Display', serif; }
+.font-display-luxury { font-family: 'DM Mono', monospace; }
+
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
