@@ -14,6 +14,7 @@ export const CLASSIFIER_DB = {
       traits: { D: 2, R: 4, I: 3, T: 3, E: 2 },
       accentColor: "#38bdf8", // Sky/Cyan
       glowColor: "rgba(56, 189, 248, 0.4)",
+      tagline: "Domaina Adrielja"
     },
     Heleion: {
       name: "Heleion",
@@ -21,6 +22,7 @@ export const CLASSIFIER_DB = {
       traits: { D: 5, R: 1, I: 5, T: 3, E: 3 },
       accentColor: "#c084fc", // Pale Purple
       glowColor: "rgba(192, 132, 252, 0.4)",
+      tagline: "Domaina Helios"
     },
     Kazandrian: {
       name: "Kazandrian",
@@ -28,6 +30,7 @@ export const CLASSIFIER_DB = {
       traits: { D: 2, R: 5, I: 3, T: 4, E: 1 },
       accentColor: "#f87171", // Soft Red
       glowColor: "rgba(248, 113, 113, 0.4)",
+      tagline: "Domaina Kazandria"
     },
     Ymaari: {
       name: "Ymaari",
@@ -35,6 +38,7 @@ export const CLASSIFIER_DB = {
       traits: { D: 1, R: 2, I: 4, T: 1, E: 1 },
       accentColor: "#fb923c", // Soft Orange
       glowColor: "rgba(251, 146, 60, 0.4)",
+      tagline: "Domaina Ymaar"
     },
     Elysian: {
       name: "Elysian",
@@ -42,13 +46,15 @@ export const CLASSIFIER_DB = {
       traits: { D: 2, R: 2, I: 5, T: 2, E: 5 },
       accentColor: "#fbbf24", // Premium Gold
       glowColor: "rgba(251, 191, 36, 0.4)",
+      tagline: "Domaina Elysia"
     },
-    Nephimai: {
-      name: "Nephimai",
+    Naphimai: {
+      name: "Naphimai",
       blurb: "ERROR: WANTED SPECIES. DEAD OR ALIVE. You're the last of a species long believed to have gone extinct, and what exactly that means for you is something you don't fully understand yet. You are invaluable and inimical, all at once. Get ready to run.",
       traits: { D: 3, R: 1, I: 4, T: 1, E: 1 },
       accentColor: "#fda4af", // Soft rose gold
       glowColor: "rgba(253, 164, 175, 0.5)",
+      tagline: "Domaina Naphemeia"
     }
   },
 
