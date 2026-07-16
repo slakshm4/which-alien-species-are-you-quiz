@@ -345,6 +345,10 @@ export default function App() {
 
   const handleReset = () => {
     triggerBeep(320, 0.3, "sine");
+    if (activeAudio) {
+      activeAudio.pause();
+      setActiveAudio(null);
+    }
     setSelections({});
     setGuestName("");
     setNdaAccepted(false);
@@ -353,6 +357,8 @@ export default function App() {
     setDisplayedQuestionIndex(0);
     setOverrideActive(false);
     setMatchResult(null);
+    setMatchedScoreSummary({});
+    setCurrentScreen('landing');
   };
 
   const playAudioTransmission = (audioUrl) => {
@@ -370,9 +376,37 @@ export default function App() {
     setActiveAudio(audio);
   };
 
-  const handleShare = () => {
-    setIsCopied(true);
-    setTimeout(() => setIsCopied(false), 2000);
+  const handleShare = async () => {
+    const link = window.location.href;
+
+    try {
+      let copied = false;
+      if (navigator.clipboard?.writeText) {
+        try {
+          await navigator.clipboard.writeText(link);
+          copied = true;
+        } catch {
+          copied = false;
+        }
+      }
+
+      if (!copied) {
+        const copyField = document.createElement('textarea');
+        copyField.value = link;
+        copyField.style.position = 'fixed';
+        copyField.style.opacity = '0';
+        document.body.appendChild(copyField);
+        copyField.select();
+        copied = document.execCommand('copy');
+        document.body.removeChild(copyField);
+      }
+
+      if (!copied) throw new Error('Copy failed');
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 2000);
+    } catch {
+      setIsCopied(false);
+    }
   };
 
   const calculateCompatibility = () => {
@@ -925,7 +959,7 @@ export default function App() {
                   className="px-6 py-3 rounded bg-transparent border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 text-[11px] font-sans-luxury uppercase tracking-widest transition-colors flex items-center space-x-2"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
-                  <span>Clear Buffer</span>
+                  <span>Return to Landing</span>
                 </button>
               </div>
             </div>
