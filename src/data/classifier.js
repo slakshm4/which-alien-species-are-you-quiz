@@ -11,7 +11,7 @@ export const CLASSIFIER_DB = {
     Adrielite: {
       name: "Adrielite",
       blurb: "You'd rather talk your way out of a war than fight one. Those unfamiliar with you will underestimate you, until they realise you've already won the room.",
-      traits: { D: 2, R: 4, I: 3, T: 3, E: 2 },
+      traits: { D: 5, R: 4, I: 3, T: 3, E: 2 },
       accentColor: "#38bdf8", // Sky/Cyan
       glowColor: "rgba(56, 189, 248, 0.4)",
       tagline: "Domaina Adrielja"
